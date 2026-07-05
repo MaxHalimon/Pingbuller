@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'RobotoLocal';
+  src: url('/assets/fonts/Roboto-Light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoLocal';
+  src: url('/assets/fonts/Roboto-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoLocal';
+  src: url('/assets/fonts/Roboto-Black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-[#82ca9c] px-6 py-3 text-sm font-black uppercase text-white transition hover:bg-[#64c583] focus:outline-none focus:ring-2 focus:ring-plum-300 focus:ring-offset-2 focus:ring-offset-transparent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-white/45 px-6 py-3 text-sm font-black uppercase text-white transition hover:border-plum-300 hover:text-plum-300;
+  }
+}
+
+.bg-about-gradient {
+  background: linear-gradient(to top, #1d2f37 0%, #745083 50%, #6a4778 100%);
+}
+
+.about-sprite {
+  background-image: url('/assets/images/sprite-about.png');
+  background-repeat: no-repeat;
+  display: block;
+  flex: 0 0 30px;
+  height: 54px;
+  margin-top: 5px;
+}
+
+.about-sprite-0 {
+  background-position: 0 0;
+}
+
+.about-sprite-1 {
+  background-position: -34px 0;
+}
+
+.about-sprite-2 {
+  background-position: -67px 0;
+}
